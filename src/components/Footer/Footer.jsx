@@ -1,12 +1,15 @@
-import React from 'react';
+import React from 'react'
+import LeftSide from './LeftSide';
+import RightSide from './RightSide';
+import './css/Footer.css';
 
-
-function Footer() {
+export default function Footer() {
     return (
-        <div>
-            
-        </div>
-    )
-}
+        <section className='footer'>
+            <LeftSide />
+            <RightSide />
+        </section>
+    );
+};
 
-export default Footer
+
