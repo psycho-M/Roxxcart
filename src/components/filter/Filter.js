@@ -5,8 +5,7 @@ import "./Filter.css";
 export default function Filter() {
   return (
     <div className="filter">
-      <div className="number">X products found.</div>
-      <div className="col-md-4">
+      <div className="order">
         <label>
           Order by
           <select
@@ -25,7 +24,7 @@ export default function Filter() {
           </select>
         </label>
       </div>
-      <div className="col-md-4">
+      <div className="filter-options">
         <label>
           {" "}
           Filter Size

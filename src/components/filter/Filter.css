@@ -16,6 +16,15 @@
   justify-content: center;
 }
 
-.filter .number {
-  font-size: 2rem;
+.filter .order label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+.filter .filter-options label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  padding: 10px;
 }
