@@ -3,6 +3,7 @@ import { Nav, NavLogo, NavLink, Bars, NavMenu } from "./NavbarElements";
 import { FiShoppingCart, FiUser } from "react-icons/fi";
 import { MdFavoriteBorder } from "react-icons/md";
 import { IconContext } from "react-icons";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -28,7 +29,9 @@ const Navbar = () => {
               Contact
             </NavLink>
           </NavMenu>
-          <FiShoppingCart />
+          <Link to="/cart" activeStyle>
+            <FiShoppingCart />
+          </Link>
           <MdFavoriteBorder />
           <FiUser />
         </Nav>
