@@ -1,7 +1,13 @@
 import React from "react";
-
+import Footer from "../Footer/Footer";
+import NewsLetter from "../NewLetter/NewLetter";
 const Home = () => {
-  return <h1>Welcome to our website!</h1>;
+  return (
+    <div>
+      <NewsLetter />
+      <Footer />
+    </div>
+  );
 };
 
 export default Home;

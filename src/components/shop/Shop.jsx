@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import data from "../../data.js";
 import Card from "../productCard/Card";
+import data from "../../data";
 import "./Shop.css";
+import { useSelector } from "react-redux";
+import { connect } from "react-redux";
 import Filter from "../filter/Filter";
 
-export default function Shop() {
+function Shop() {
   const mainData = data.map((item) => (
     <Card
       key={item.id}
@@ -13,8 +15,11 @@ export default function Shop() {
       image={item.main_img}
       description={item.description}
       id={item.id}
+      item={item}
     />
   ));
+
+  console.log(data);
   return (
     <div className="shop">
       <Filter />
@@ -23,3 +28,9 @@ export default function Shop() {
     </div>
   );
 }
+
+const mapStateToProps = (state) => {
+  return {};
+};
+
+export default connect(mapStateToProps)(Shop);

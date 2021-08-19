@@ -1,13 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useParams } from "react";
 import "./Card.css";
 import { BsHeart, BsFillHeartFill } from "react-icons/bs";
 import { MdAddShoppingCart } from "react-icons/md";
 import { IconContext } from "react-icons";
+import { connect } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { addProduct, addQuantity, updateTotal } from "../../redux/actions";
 
-export default function Card({ name, price, image, description, id }) {
+export default function Card({ name, price, image, description, id, item }) {
   const [liked, setLiked] = useState(true);
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart);
+
   function handleClick() {
     setLiked(!liked);
+  }
+
+  function isPresentInCart(id) {
+    for (let i = 0; i < cart.length; i++) {
+      if (cart[i].id === id) {
+        dispatch(addQuantity(cart[i].id));
+        dispatch(updateTotal(item.price));
+        return true;
+      }
+    }
+    return false;
   }
   return (
     <IconContext.Provider
@@ -20,9 +37,29 @@ export default function Card({ name, price, image, description, id }) {
             <h4 className="card-title">{name}</h4>
             <p>Price ₹ : {price}</p>
           </div>
-          <div className="add-to-cart">
-            <MdAddShoppingCart />
-          </div>
+          <button
+            onClick={() => {
+              if (!isPresentInCart(item.id)) {
+                dispatch(
+                  addProduct({
+                    ...item,
+                    quantity: 1,
+                    currPrice: item.price,
+                  })
+                );
+                dispatch(updateTotal(item.price));
+              }
+
+              console.log(cart);
+            }}
+            className="add-to-cart"
+          >
+            <MdAddShoppingCart
+              style={{
+                cursor: "pointer",
+              }}
+            />
+          </button>
         </div>
         <div className="card-like-bar">
           {liked ? (

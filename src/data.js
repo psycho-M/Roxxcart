@@ -8,6 +8,9 @@ const data = [
     name: "Regular Fit Flannel shirt",
     price: 1499,
     category: "Men",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     sub_category: "shirt",
     description:
       "Checked shirt in soft cotton flannel with a turn-down collar, classic front, yoke at the back and open chest pockets. Long sleeves with buttoned cuffs and a sleeve placket with a link button. Rounded hem. Regular Fit – a classic fit with good room for movement and a gently tapered waist to create a comfortable, tailored silhouette.",
@@ -28,11 +31,16 @@ const data = [
     name: "Denim shirt jacket",
     price: 2299,
     category: "Men",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
+
     sub_category: "shirt",
     description:
       "Shirt jacket in sturdy cotton denim with a collar, yoke at the back and metal buttons down the front. Open chest pocket, long sleeves with plackets and buttoned cuffs, and a gently rounded hem.",
     composition: "Cotton 100%",
     fit: "Regular fit",
+
     main_img:
       "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fbc%2Ff9%2Fbcf982e203aa2d4cccb839f9b82a3ee1b1b2eeb0.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/fullscreen]",
     other_img_1:
@@ -45,6 +53,9 @@ const data = [
   },
   {
     id: 2,
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     name: "Regular Fit Flannel shirt",
     price: 1499,
     category: "Men",
@@ -65,6 +76,9 @@ const data = [
   },
   {
     id: 3,
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     name: "Twill shirt jacket",
     price: 2299,
     category: "Men",
@@ -87,6 +101,9 @@ const data = [
     id: 4,
     name: "Regular Fit Flannel shirt",
     price: 1499,
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     category: "Men",
     sub_category: "shirt",
     description:
@@ -107,6 +124,9 @@ const data = [
     id: 5,
     name: "Relaxed Fit T-shirt",
     price: 799,
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     category: "Men",
     sub_category: "T-shirt",
     description:
@@ -127,6 +147,9 @@ const data = [
     id: 6,
     name: "3-pack Regular Fit T-shirts",
     price: 1299,
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     category: "Men",
     sub_category: "T-shirt",
     description: "Round-necked T-shirts in soft cotton jersey.",
@@ -147,6 +170,9 @@ const data = [
     name: "Relaxed Fit Jersey top",
     price: 1499,
     category: "Men",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     sub_category: "T-shirt",
     description:
       "Long-sleeved top in soft, printed cotton jersey. Relaxed fit with dropped shoulders and ribbing around the neckline and cuffs.",
@@ -167,6 +193,9 @@ const data = [
     name: "Regular Fit T-shirt",
     price: 399,
     category: "Men",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     sub_category: "T-shirt",
     description:
       "Round-necked T-shirt in soft cotton jersey with a print motif.",
@@ -186,6 +215,9 @@ const data = [
     id: 9,
     name: "Regular Fit T-shirt",
     price: 1299,
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     category: "Men",
     sub_category: "T-shirt",
     description:
@@ -206,6 +238,9 @@ const data = [
     id: 10,
     name: "Twill trousers Slim Fit",
     price: 1999,
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     category: "Men",
     sub_category: "Trousers",
     description:
@@ -226,6 +261,9 @@ const data = [
     id: 11,
     name: "Cargo joggers",
     price: 2699,
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     category: "Men",
     sub_category: "Trousers",
     description:
@@ -246,6 +284,9 @@ const data = [
     id: 12,
     name: "Cargo trousers Regular Fit",
     price: 2299,
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     category: "Men",
     sub_category: "Trousers",
     description:
@@ -267,6 +308,9 @@ const data = [
     name: "Cargo joggers",
     price: 2699,
     category: "Men",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     sub_category: "Trousers",
     description:
       "Joggers in a cotton weave with covered elastication and a drawstring at the waist, diagonal side pockets and flap back and leg pockets with concealed press-studs. Tapered legs with seams and darts at the knees and covered elastication at the hems.",
@@ -286,6 +330,9 @@ const data = [
     id: 14,
     name: "Regular Fit Cargo trousers",
     price: 1299,
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     category: "Men",
     sub_category: "Trousers",
     description:
@@ -306,6 +353,9 @@ const data = [
     id: 15,
     name: "Trainers",
     price: 1999,
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     category: "Men",
     sub_category: "Shoes",
     description:
@@ -325,6 +375,9 @@ const data = [
     id: 16,
     name: "Low profile trainers",
     price: 1499,
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     category: "Men",
     sub_category: "Shoes",
     description:
@@ -345,6 +398,9 @@ const data = [
     name: "Hi-top trainers",
     price: 2299,
     category: "Men",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     sub_category: "Shoes",
     description:
       "Hi-top trainers in sturdy cotton canvas with a print motif, eyelets in the sides and a tongue and lacing at the front. Linings and insoles in cotton canvas and rubber soles that are patterned underneath. Height of soles 3 cm.",
@@ -364,6 +420,9 @@ const data = [
     name: "Low profile printed trainers",
     price: 1999,
     category: "Men",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     sub_category: "Shoes",
     description:
       "Low profile trainers in patterned cotton canvas with a padded top edge, lacing at the front and a loop at the back. Piqué linings and canvas insoles. Smooth-edged rubber soles with a patterned underneath. Height of soles 3 cm.",
@@ -384,6 +443,9 @@ const data = [
     price: 1999,
     category: "Men",
     sub_category: "Shoes",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     description:
       "Hi-tops in sturdy cotton canvas with a tongue and lacing at the front. Cotton canvas linings and insoles and rubber soles that are patterned underneath. Height of soles 3.1 cm.",
     composition:
@@ -403,6 +465,9 @@ const data = [
     price: 1999,
     category: "Men",
     sub_category: "Shoes",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     description:
       "Low profile trainers in patterned cotton canvas with a padded top edge, lacing at the front and a loop at the back. Piqué linings and canvas insoles. Smooth-edged rubber soles with a patterned underneath. Height of soles 3 cm.",
     composition:
@@ -422,6 +487,9 @@ const data = [
     price: 1499,
     category: "Men",
     sub_category: "Jeans",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     description:
       "5-pocket jeans in stretch cotton denim with a regular waist, zip fly and button, and slim legs.",
     fit: "Slim fit",
@@ -442,6 +510,9 @@ const data = [
     price: 1999,
     category: "Men",
     sub_category: "Jeans",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     description:
       "5-pocket jeans in washed cotton denim with a regular waist, zip fly and button and wide, straight legs. The cotton content of the jeans is partly recycled.",
     composition: "Cotton 100%",
@@ -462,6 +533,9 @@ const data = [
     price: 2699,
     category: "Men",
     sub_category: "Jeans",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     description:
       "5-pocket joggers in stretch denim. Regular waist with covered elastication and a drawstring, and a zip fly with a button. Gently tapered legs with good room for movement over the thighs and knees, and covered elastication at the hems. Made using Lycra® Hybrid Technology for exceptional softness and comfort without compromising the authentic denim look.",
     composition: "Cotton 78%, Polyester 21%, Elastane 1%",
@@ -480,6 +554,9 @@ const data = [
     id: 24,
     name: "Regular Jeans",
     price: 1499,
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     category: "Men",
     sub_category: "Jeans",
     description:
@@ -499,6 +576,9 @@ const data = [
   {
     id: 25,
     name: "Relaxed Jeans",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     price: 1999,
     category: "Men",
     sub_category: "Jeans",
@@ -520,6 +600,9 @@ const data = [
     id: 26,
     name: "Cropped top",
     price: 399,
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     category: "Women",
     sub_category: "Tops and T-shirt",
     description:
@@ -539,6 +622,9 @@ const data = [
   {
     id: 27,
     name: "Print-motif T-shirt",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     price: 1299,
     category: "Women",
     sub_category: "Tops and T-shirt",
@@ -559,6 +645,9 @@ const data = [
   {
     id: 28,
     name: "Ribbed thong body",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     price: 799,
     category: "Women",
     sub_category: "Tops and T-shirt",
@@ -580,6 +669,9 @@ const data = [
     id: 29,
     name: "Lacing-detail cropped top",
     price: 799,
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     category: "Women",
     sub_category: "Tops and T-shirt",
     description:
@@ -600,6 +692,9 @@ const data = [
     id: 30,
     name: "Ribbed vest top",
     price: 599,
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     category: "Women",
     sub_category: "Tops and T-shirt",
     description: "Fitted vest top in ribbed cotton jersey with a round neck.",
@@ -620,6 +715,9 @@ const data = [
     name: "Mom Loose-fit Ultra High Jeans",
     price: 1499,
     category: "Women",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     sub_category: "Jeans",
     description:
       "5-pocket, ankle-length jeans in washed denim with an extra-high waist and zip fly and button. Loose fit with gently tapered legs. The cotton content of the jeans is partly recycled.",
@@ -637,6 +735,9 @@ const data = [
   },
   {
     id: 32,
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     name: "Loose Mom Ultra High Jeans",
     price: 1499,
     category: "Women",
@@ -659,6 +760,9 @@ const data = [
     id: 33,
     name: "Skinny High Ankle Jeans",
     price: 1999,
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     category: "Women",
     sub_category: "Jeans",
     description:
@@ -680,6 +784,9 @@ const data = [
     name: "Mom High Ankle Jeans",
     price: 1999,
     category: "Women",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     sub_category: "Jeans",
     description:
       "5-pocket, ankle-length jeans in washed, stretch cotton denim with an extra-high waist. Slightly looser fit with straight legs. The cotton content of the jeans is partly recycled.",
@@ -698,6 +805,9 @@ const data = [
   {
     id: 35,
     name: "90’s Straight Baggy Jeans",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     price: 2299,
     category: "Women",
     sub_category: "Jeans",
@@ -718,6 +828,9 @@ const data = [
   {
     id: 36,
     name: "Oversized lyocell jacket",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     price: 5499,
     category: "Women",
     sub_category: "Jackets",
@@ -738,6 +851,9 @@ const data = [
   {
     id: 37,
     name: "Short-sleeved jacket",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     price: 2699,
     category: "Women",
     sub_category: "Jackets",
@@ -759,6 +875,9 @@ const data = [
     id: 38,
     name: "Oversized jacket",
     price: 2999,
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     category: "Women",
     sub_category: "Jackets",
     description:
@@ -779,6 +898,9 @@ const data = [
     id: 39,
     name: "Gathered-sleeve jacket",
     price: 2999,
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     category: "Women",
     sub_category: "Jackets",
     description:
@@ -800,6 +922,9 @@ const data = [
     id: 40,
     name: "Oversized jacket",
     price: 1499,
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     category: "Women",
     sub_category: "Jackets",
     description:
@@ -820,6 +945,9 @@ const data = [
     id: 41,
     name: "Cotton-blend sweatpants",
     price: 1299,
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     category: "Women",
     sub_category: "Trousers",
     description:
@@ -838,6 +966,9 @@ const data = [
   },
   {
     id: 42,
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     name: "Crease-leg trousers",
     price: 1999,
     category: "Women",
@@ -862,6 +993,9 @@ const data = [
     price: 2299,
     category: "Women",
     sub_category: "Trousers",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     description:
       "Trousers woven in a soft lyocell blend. High waist with covered elastication, diagonal side pockets and wide, straight legs.",
     composition:
@@ -881,6 +1015,9 @@ const data = [
     id: 44,
     name: "Ribbed jazz trousers",
     price: 799,
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     category: "Women",
     sub_category: "Trousers",
     description:
@@ -900,6 +1037,9 @@ const data = [
   {
     id: 45,
     name: "Jersey joggers",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     price: 799,
     category: "Women",
     sub_category: "Trousers",
@@ -921,6 +1061,9 @@ const data = [
   {
     id: 46,
     name: "Wide trousers",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     price: 1999,
     category: "Women",
     sub_category: "Trousers",
@@ -942,6 +1085,9 @@ const data = [
   {
     id: 47,
     name: "Mules",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     price: 2299,
     category: "Women",
     sub_category: "Shoes",
@@ -963,6 +1109,9 @@ const data = [
     name: "Platform trainers",
     price: 1999,
     category: "Women",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     sub_category: "Shoes",
     description:
       "Platform trainers with lacing at the front, cotton canvas linings and insoles and rubber soles. Platform 3.5 cm.",
@@ -981,6 +1130,9 @@ const data = [
     id: 49,
     name: "Low profile trainers",
     price: 799,
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     category: "Women",
     sub_category: "Shoes",
     description:
@@ -999,6 +1151,9 @@ const data = [
   {
     id: 50,
     name: "Chelsea boots",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     price: 2699,
     category: "Women",
     sub_category: "Shoes",
@@ -1018,6 +1173,9 @@ const data = [
   {
     id: 51,
     name: "Platform espadrilles",
+    quantity: 1,
+    discount: 2,
+    discountPrice: 20 - (2 / 100) * 20,
     price: 1999,
     category: "Women",
     sub_category: "Shoes",
