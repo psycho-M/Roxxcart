@@ -20,7 +20,7 @@ export default function Card({ name, price, image, description, id }) {
             <h4 className="card-title">{name}</h4>
             <p>Price ₹ : {price}</p>
           </div>
-          <div className="cart">
+          <div className="add-to-cart">
             <MdAddShoppingCart />
           </div>
         </div>
