@@ -6,7 +6,7 @@ import { NewsLetter } from './components/NewLetter/NewLetter';
 function App() {
     return (
         <div>
-            
+            <NewsLetter />
         </div>
     );
 };
