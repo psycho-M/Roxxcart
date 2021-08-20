@@ -6,8 +6,6 @@ import Navbar from "../navbar";
 const Home = () => {
   return (
     <section>
-      <Navbar />
-      <h1>Welcome to our website!</h1>);
       <NewsLetter />
       <Footer />
     </section>

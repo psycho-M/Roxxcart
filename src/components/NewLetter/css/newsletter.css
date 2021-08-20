@@ -5,6 +5,7 @@
 }
 
 .news-letter {
+    margin-top: 22%;
     width: 100%;
     display: flex;
     background-image: url('../assets/25793554-seamless-background-envelope-newsletter-style-illustration-design.jpg');

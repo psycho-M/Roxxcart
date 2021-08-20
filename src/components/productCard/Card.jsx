@@ -6,7 +6,7 @@ import { IconContext } from "react-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { addProduct, addQuantity, updateTotal } from '../../redux/actions'
 
-export default function Card({ name, price, image, description, id, item }) {
+export default function Card({ item }) {
   const [liked, setLiked] = useState(true);
   const dispatch = useDispatch();
   const cart = useSelector(state => state.cart);
@@ -30,11 +30,11 @@ export default function Card({ name, price, image, description, id, item }) {
       value={{ style: { fontSize: "22px", color: "#4C4C6D" } }}
     >
       <div className="card">
-        <img className="card-image" src={image} alt="Logo" />
+        <img className="card-image" src={item.main_img} alt="Logo" />
         <div className="card-bottom">
           <div className="card-header">
-            <h4 className="card-title">{name}</h4>
-            <p>Price ₹ : {price}</p>
+            <h4 className="card-title">{item.name}</h4>
+            <p>Price ₹ : {item.price}</p>
           </div>
           <button onClick={() => {
             if(!isPresentInCart(item.id)) {

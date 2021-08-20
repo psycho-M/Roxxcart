@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './css/newsletter.css'
 
-export function NewsLetter() {
+export default function NewsLetter() {
     const [input, setInput] = useState('');
     return (
         <section className="news-letter">
@@ -10,9 +10,14 @@ export function NewsLetter() {
             </section>
 
             <section className="input">
-                <input onChange={(e) => {
-                    setInput(e.target.value);
-                }} type="email" placeholder='Enter your email'  value={input}/>
+                <input 
+                    onChange={(e) => {
+                        setInput(e.target.value);
+                    }}
+                    type="email" 
+                    placeholder='Enter your email'  
+                    value={input}
+                />
                 <button >Submit</button>
             </section>
         </section>
