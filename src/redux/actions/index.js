@@ -62,6 +62,20 @@ const filterByPrice = (priceOrder) => {
     };
 }
 
+const addFav = (item) => {
+    return {
+        type: 'ADD_FAV',
+        payload: item
+    };
+}
+
+const subFav = (item) => {
+    return {
+        type: 'SUB_FAV',
+        payload: item
+    };
+}
+
 
 export {
     addQuantity,
@@ -72,6 +86,8 @@ export {
     updateSize, 
     filterByGender, 
     filterBySize,
-    filterByPrice
+    filterByPrice,
+    addFav,
+    subFav
 };
 

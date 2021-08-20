@@ -4,7 +4,13 @@ import { BsHeart, BsFillHeartFill } from "react-icons/bs";
 import { MdAddShoppingCart } from "react-icons/md";
 import { IconContext } from "react-icons";
 import { useDispatch, useSelector } from "react-redux";
-import { addProduct, addQuantity, updateTotal } from '../../redux/actions'
+import { 
+  addProduct, 
+  addQuantity, 
+  updateTotal, 
+  addFav,
+  subFav
+} from '../../redux/actions'
 
 export default function Card({ item }) {
   const [liked, setLiked] = useState(true);
@@ -15,6 +21,11 @@ export default function Card({ item }) {
 
   function handleClick() {
     setLiked(!liked);
+    if(liked === true) {
+      dispatch(addFav(item));
+    } else {
+      dispatch(subFav(item.id));
+    }
   }
 
   function isPresentInCart(id) {
@@ -60,8 +71,10 @@ export default function Card({ item }) {
         <div className="card-like-bar">
           {liked ? (
             <BsHeart onClick={handleClick} />
-          ) : (
-            <BsFillHeartFill onClick={handleClick} />
+          ) : ( 
+            <BsFillHeartFill style={{
+              color: '#fbb03b'
+            }} onClick={handleClick} />
           )}
         </div>
       </div>

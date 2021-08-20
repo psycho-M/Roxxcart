@@ -16,6 +16,9 @@ import { Link } from "react-router-dom";
 import svg from '../../assets/logo.svg';
 
 const Navbar = () => {
+  const totalFav = useSelector(state => state.favorites).length;
+  const cartQuantity = useSelector(state => state.cart).length;
+
   return (
     <>
       <IconContext.Provider
@@ -39,10 +42,29 @@ const Navbar = () => {
             </NavLink>
           </NavMenu>
           <IconLink>
-            <Link to="/cart" activeStyle>
+            <Link style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}} to="/cart" activeStyle>
               <FiShoppingCart />
+              <span style={{
+                // position: 'absolute',
+                fontWeight: '500', 
+                fontSize: '1rem',
+              }}
+              >
+                {cartQuantity}
+              </span>
             </Link>
-            <MdFavoriteBorder />
+            <Link style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}} to='/favorites'>
+              <MdFavoriteBorder value={totalFav} />
+              <span style={{
+                // position: 'absolute',
+                fontWeight: '500', 
+                fontSize: '1rem',
+              }}
+              >
+                {totalFav}
+              </span>
+            </Link>
+            
             <FiUser />
           </IconLink>
         </Nav>

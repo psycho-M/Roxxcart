@@ -6,8 +6,6 @@ let currSize = 'ALL', currGender = 'SELECT';
 let tempState;
 const allMen = data.filter(item => item.category === 'Men');
 const allWomen = data.filter(item => item.category === 'Women');
-const highToLow = data.slice().sort((first, second) => first.price - second.price);
-const lowToHigh = data.slice().sort((first, second) => second.price - first.price);
 
 
 
