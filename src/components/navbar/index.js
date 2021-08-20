@@ -13,7 +13,7 @@ import { FiShoppingCart, FiUser } from "react-icons/fi";
 import { MdFavoriteBorder } from "react-icons/md";
 import { IconContext } from "react-icons";
 import { Link } from "react-router-dom";
-import svg from "../../assets/logo.svg";
+import svg from '../../assets/logo.svg';
 
 const Navbar = () => {
   return (

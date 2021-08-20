@@ -1,7 +1,6 @@
 import React from "react";
 import Footer from "../Footer/Footer";
-import { NewsLetter } from "../NewLetter/NewLetter";
-import Navbar from "../navbar";
+import  NewsLetter  from "../NewLetter/NewLetter";
 
 const Home = () => {
   return (

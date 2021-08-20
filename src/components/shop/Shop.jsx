@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-import data from "../../data.js";
+import { useSelector } from 'react-redux';
 import Card from "../productCard/Card";
 import "./Shop.css";
 import Filter from "../filter/Filter";
 
+
 export default function Shop() {
+  const data = useSelector(state => state.shop);
+  
   const mainData = data.map((item) => (
     <Card
       key={item.id}

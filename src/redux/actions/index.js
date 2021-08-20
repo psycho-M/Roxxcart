@@ -33,5 +33,37 @@ const updateTotal = (change) => {
     }
 };
 
-export { addQuantity, subQuantity, addProduct, removeProduct, updateTotal };
+const updateSize = (selectedSize, id) => {
+    return {
+        type: 'UPDATE_SIZE',
+        payload: selectedSize,
+        itemId: id
+    };
+}
+
+const filterByGender = (gender) => {
+    return {
+        type: 'FILTER_BY_GENDER',
+        payload: gender
+    };
+}
+
+const filterBySize = (size) => {
+    return {
+        type: 'FILTER_BY_SIZE',
+        payload: size
+    };
+}
+
+
+export {
+    addQuantity,
+    subQuantity, 
+    addProduct, 
+    removeProduct, 
+    updateTotal, 
+    updateSize, 
+    filterByGender, 
+    filterBySize
+};
 

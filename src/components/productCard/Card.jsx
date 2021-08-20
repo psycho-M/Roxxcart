@@ -10,6 +10,8 @@ export default function Card({ item }) {
   const [liked, setLiked] = useState(true);
   const dispatch = useDispatch();
   const cart = useSelector(state => state.cart);
+  let filterSize = document.getElementById('filter-size');
+  console.log("filter size element value", filterSize ? filterSize.value : "" );
 
   function handleClick() {
     setLiked(!liked);
@@ -41,7 +43,8 @@ export default function Card({ item }) {
               dispatch(addProduct({
                 ...item,
                 quantity: 1,
-                currPrice: item.price
+                currPrice: item.price,
+                currSize: filterSize ? filterSize.value : item.size[0]
               }));
               dispatch(updateTotal(item.price));
             }

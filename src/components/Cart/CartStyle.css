@@ -87,6 +87,15 @@
     justify-content: center;
     font-size: 1.2rem;
     font-weight: 400;
+    width: 50px;
+}
+
+.cart-product-container .table-product .size select {
+    width: 50px;
+}
+
+.cart-product-container .table-product .size select option {
+    width: 50px;
 }
 
 .cart-product-container .table-product .amount{

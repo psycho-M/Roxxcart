@@ -1,3 +1,6 @@
+
+
+
 const cartReducer = (state = [], action) => {
     switch (action.type) {
         case 'ADD_PRODUCT':
@@ -23,6 +26,15 @@ const cartReducer = (state = [], action) => {
                     }
                     tempCart1[i].currPrice = tempCart1[i].price * tempCart1[i].quantity;
                     return tempCart1;
+                }
+            }
+        case 'UPDATE_SIZE':
+            const tempCart2 = [...state];
+            for (let i = 0; i < tempCart2.length; i++) {
+                if (tempCart2[i].id === action.itemId) {
+                    console.log(tempCart2);
+                    tempCart2[i].currSize = action.payload;
+                    return tempCart2;
                 }
             }
         default:

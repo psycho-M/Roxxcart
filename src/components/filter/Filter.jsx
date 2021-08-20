@@ -1,13 +1,22 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import "./Filter.css";
+import { useDispatch } from 'react-redux';
+import { filterByGender, filterBySize } from '../../redux/actions'
+
 // import { filterProducts, sortProducts } from "../actions/productActions";
 export default function Filter() {
+  const dispatch = useDispatch();
+  const [sizeFilter, setSizeFilter] = useState('ALL');
+  const [genderFilter, setGenderFilter] = useState('Select');
+
   return (
     <div className="filter">
       <div className="order">
+
+
         <label>
-          Order by
+          Order by Price
           <select
             className="form-control"
             //   value={this.props.sort}
@@ -25,26 +34,43 @@ export default function Filter() {
         </label>
       </div>
       <div className="filter-options">
+
+      <label>
+          Gender
+          <select
+            className="form-control"
+            id='filter-gender'
+            value={genderFilter}
+            onChange={(e) => {
+              dispatch(filterByGender(e.target.value));
+              setGenderFilter(e.target.value);
+            }}
+          >
+            <option value="Select">Select</option>
+            <option value="Men">Male</option>
+            <option value="Women">Female</option>
+          </select>
+        </label>
+        
         <label>
           {" "}
           Filter Size
           <select
             className="form-control"
-            //value={this.props.size}
-            //   onChange={(event) => {
-            //     this.props.filterProducts(
-            //       this.props.products,
-            //       event.target.value
-            //     );
-            //   }}
+            id='filter-size'
+            value={sizeFilter}
+            onChange={(e) => {
+              dispatch(filterBySize(e.target.value));
+              setSizeFilter(e.target.value);
+            }}
           >
-            <option value="">ALL</option>
-            <option value="x">XS</option>
-            <option value="s">S</option>
-            <option value="m">M</option>
-            <option value="l">L</option>
-            <option value="xl">XL</option>
-            <option value="xxl">XXL</option>
+            <option value="ALL">ALL</option>
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
           </select>
         </label>
       </div>
