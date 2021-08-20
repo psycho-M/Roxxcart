@@ -55,6 +55,13 @@ const filterBySize = (size) => {
     };
 }
 
+const filterByPrice = (priceOrder) => {
+    return {
+        type: 'FILTER_BY_PRICE',
+        payload: priceOrder
+    };
+}
+
 
 export {
     addQuantity,
@@ -64,6 +71,7 @@ export {
     updateTotal, 
     updateSize, 
     filterByGender, 
-    filterBySize
+    filterBySize,
+    filterByPrice
 };
 

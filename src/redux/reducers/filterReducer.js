@@ -6,6 +6,9 @@ let currSize = 'ALL', currGender = 'SELECT';
 let tempState;
 const allMen = data.filter(item => item.category === 'Men');
 const allWomen = data.filter(item => item.category === 'Women');
+const highToLow = data.slice().sort((first, second) => first.price - second.price);
+const lowToHigh = data.slice().sort((first, second) => second.price - first.price);
+
 
 
 
@@ -84,6 +87,19 @@ const filterReducer = (state = data.slice(), action) => {
             } else {
                 return tempState;
             }
+        case 'FILTER_BY_PRICE':
+            tempState = [...state];
+            tempState.sort((first, second) => first.price - second.price);
+            if(action.payload === 'lowestprice') {
+                return tempState;
+            }
+            else if(action.payload === 'highestprice') {
+                return tempState.reverse();
+            }
+            else {
+                return state;
+            }
+                
         default:
             return state;
     }

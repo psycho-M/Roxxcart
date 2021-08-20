@@ -2,13 +2,18 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import "./Filter.css";
 import { useDispatch } from 'react-redux';
-import { filterByGender, filterBySize } from '../../redux/actions'
+import { 
+  filterByGender,
+  filterBySize,
+  filterByPrice 
+} from '../../redux/actions'
 
 // import { filterProducts, sortProducts } from "../actions/productActions";
 export default function Filter() {
   const dispatch = useDispatch();
   const [sizeFilter, setSizeFilter] = useState('ALL');
   const [genderFilter, setGenderFilter] = useState('Select');
+  const [priceFilter, setPriceFilter] = useState('Select');
 
   return (
     <div className="filter">
@@ -16,16 +21,14 @@ export default function Filter() {
 
 
         <label>
-          Order by Price
+          Order by Price: {priceFilter}
           <select
             className="form-control"
-            //   value={this.props.sort}
-            //   onChange={(event) => {
-            //     this.props.sortProducts(
-            //       this.props.filteredProducts,
-            //       event.target.value
-            //     );
-            //   }}
+            value={priceFilter}
+            onChange={(e) => {
+              dispatch(filterByPrice(e.target.value));
+              setPriceFilter(e.target.value);
+            }}
           >
             <option value="">Select</option>
             <option value="lowestprice">Lowest to highest</option>
@@ -44,6 +47,7 @@ export default function Filter() {
             onChange={(e) => {
               dispatch(filterByGender(e.target.value));
               setGenderFilter(e.target.value);
+              setPriceFilter('Select');
             }}
           >
             <option value="Select">Select</option>
