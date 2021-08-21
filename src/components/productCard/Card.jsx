@@ -10,7 +10,9 @@ import {
   updateTotal, 
   addFav,
   subFav
-} from '../../redux/actions'
+} from '../../redux/actions';
+import { Link } from 'react-router-dom';
+import ProductPage from "../productPage/productPage";
 
 export default function Card({ item }) {
   const [liked, setLiked] = useState(true);
@@ -42,11 +44,14 @@ export default function Card({ item }) {
     <IconContext.Provider
       value={{ style: { fontSize: "22px", color: "#4C4C6D" } }}
     >
-      <div  className="card">
+      <div className="card">
         <img className="card-image" src={item.main_img} alt="Logo" />
         <div className="card-bottom">
           <div className="card-header">
-            <h4 className="card-title">{item.name}</h4>
+            <h4 className="card-title"><Link to={{
+              pathname: '/products/' + item.id,
+              state: item
+            }}>{item.name}</Link></h4>
             <p>Price ₹ : {item.price}</p>
           </div>
           <button onClick={() => {
@@ -55,7 +60,8 @@ export default function Card({ item }) {
                 ...item,
                 quantity: 1,
                 currPrice: item.price,
-                currSize: filterSize ? filterSize.value : item.size[0]
+                currSize: filterSize ? filterSize.value : item.size[0],
+                shippingMethod: 'Standard'
               }));
               dispatch(updateTotal(item.price));
             }
