@@ -1,12 +1,12 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import Card from '../productCard/Card';
+import FavCard from './FavCard';
 import Filter from '../filter/Filter';
 
 function Favorites() {
     const favorites = useSelector(state => state.favorites);
     const mainData = favorites.map((item) => (
-        <Card
+        <FavCard
             key={item.id}
             item={item}
         />
@@ -14,7 +14,6 @@ function Favorites() {
     return (
         <div className="shop">
             <Filter />
-
             <div className="shop-content">{mainData}</div>
         </div>
     );

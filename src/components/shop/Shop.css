@@ -4,6 +4,8 @@
   position: relative;
   top: 10vh;
   border: 1px solid #e5e5e5;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 select {
@@ -52,5 +54,5 @@ select:focus + .focus {
   left: 23%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
 }

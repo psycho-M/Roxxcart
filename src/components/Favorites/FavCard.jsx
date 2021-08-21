@@ -12,7 +12,7 @@ import {
   subFav
 } from '../../redux/actions'
 
-export default function Card({ item }) {
+export default function FavCard({ item }) {
   const [liked, setLiked] = useState(true);
   const dispatch = useDispatch();
   const cart = useSelector(state => state.cart);
@@ -21,7 +21,7 @@ export default function Card({ item }) {
 
   function handleClick() {
     setLiked(!liked);
-    if(liked === true) {
+    if(liked === false) {
       dispatch(addFav(item));
     } else {
       dispatch(subFav(item.id));
@@ -42,7 +42,7 @@ export default function Card({ item }) {
     <IconContext.Provider
       value={{ style: { fontSize: "22px", color: "#4C4C6D" } }}
     >
-      <div  className="card">
+      <div className="card">
         <img className="card-image" src={item.main_img} alt="Logo" />
         <div className="card-bottom">
           <div className="card-header">
@@ -70,11 +70,11 @@ export default function Card({ item }) {
         </div>
         <div className="card-like-bar">
           {liked ? (
-            <BsHeart onClick={handleClick} />
-          ) : ( 
             <BsFillHeartFill style={{
               color: '#fbb03b'
             }} onClick={handleClick} />
+          ) : ( 
+            <BsHeart onClick={handleClick} />
           )}
         </div>
       </div>
