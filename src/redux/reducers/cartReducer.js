@@ -1,5 +1,9 @@
+let cartStorage = window.localStorage
+// cartStorage.setItem('cart', something)
+let initialCart = cartStorage.getItem('cart') ? JSON.parse(cartStorage.getItem('cart')) : [];
+console.log(initialCart);
 
-const cartReducer = (state = [], action) => {
+const cartReducer = (state = initialCart, action) => {
     switch (action.type) {
         case 'ADD_PRODUCT':
             return [...state, action.payload];
@@ -15,15 +19,13 @@ const cartReducer = (state = [], action) => {
                 }
             }
 
-            // let cartStorage = window.localStorage
-            // cartStorage.setItem('cart', something)
-            // cartStorage.getItem('cart')
+
         case 'SUB_QUANTITY':
             const tempCart1 = [...state];
             for (let i = 0; i < tempCart1.length; i++) {
                 if (tempCart1[i].id === action.payload) {
                     tempCart1[i].quantity -= 1;
-                    if(tempCart1[i].quantity === 0) {
+                    if (tempCart1[i].quantity === 0) {
                         return tempCart1.filter(item => item.id !== action.payload);
                     }
                     tempCart1[i].currPrice = tempCart1[i].price * tempCart1[i].quantity;
@@ -39,12 +41,13 @@ const cartReducer = (state = [], action) => {
                     return tempCart2;
                 }
             }
-        
+
         case 'UPDATE_LOCAL_STORAGE':
             let cartStorage = window.localStorage;
             let temp = JSON.parse(cartStorage.getItem('cart'))
-            return temp;
-    
+            console.log("temp in cartReducer",temp);
+            return temp ? temp : [];
+
         default:
             return state;
     };

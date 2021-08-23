@@ -11,6 +11,8 @@ import {
 
 
 const CartItem = ({ item }) => {
+    const cartStorage = window.localStorage;
+    const cart = useSelector(state => state.cart);
     const dispatch = useDispatch();
     return (
         <div className="table-product">
@@ -58,6 +60,7 @@ const CartItem = ({ item }) => {
                 onClick={() => {
                     dispatch(removeProduct(item.id));
                     dispatch(updateTotal(-item.currPrice));
+                    cartStorage.setItem("cart", JSON.stringify(cart));
                 }}
                 className="remove"
             >

@@ -11,6 +11,7 @@ import { updateLocalStorageCartData } from "../../redux/actions";
 function Cart() {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
+  console.log("cart in Card.jsx",cart);
   const total = useSelector((state) => state.total);
   const status = useSelector((state) => state.loginStatus);
 
@@ -31,7 +32,7 @@ function Cart() {
           </div>
           {/* <CartItem productImage={data[0].main_img} productName={data[0].name} size="XL" price="23" quantity="1" />
                     <CartItem productImage={data[0].main_img} productName={data[0].name} size="XL" price="23" quantity="1" /> */}
-          {cart.map((item, index) => (
+          {cart.map((item) => (
             <CartItem key={item.id} item={item} />
           ))}
         </div>
