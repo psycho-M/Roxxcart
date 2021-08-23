@@ -14,6 +14,10 @@ const cartReducer = (state = [], action) => {
                     return tempCart;
                 }
             }
+
+            // let cartStorage = window.localStorage
+            // cartStorage.setItem('cart', something)
+            // cartStorage.getItem('cart')
         case 'SUB_QUANTITY':
             const tempCart1 = [...state];
             for (let i = 0; i < tempCart1.length; i++) {
@@ -35,6 +39,12 @@ const cartReducer = (state = [], action) => {
                     return tempCart2;
                 }
             }
+        
+        case 'UPDATE_LOCAL_STORAGE':
+            let cartStorage = window.localStorage;
+            let temp = JSON.parse(cartStorage.getItem('cart'))
+            return temp;
+    
         default:
             return state;
     };

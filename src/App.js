@@ -12,10 +12,10 @@ import "./components/FontawesomeIcons";
 import ProductPage from "./components/productPage/productPage";
 import OrderPage from "./components/OrderPage/OrderPage";
 import SignUp from './components/pages/LoginPage/SignUp'
+import LoginPage from "./components/pages/LoginPage/LoginPage";
 import { useSelector } from 'react-redux';
 
 function App() {
-
   return (
     <Router>
       <Navbar />
@@ -28,7 +28,7 @@ function App() {
         <Route path="/favorites" component={Favorites} />
         <Route path="/order-now" component={OrderPage} />
         <Route path="/sign-up" component={SignUp} />
-        <Route path="/products/:id" component={ProductPage} />
+        <Route path="/loginPage" component={LoginPage} />
         <Route path="/products/:id" component={ProductPage} />
       </Switch>
     </Router>

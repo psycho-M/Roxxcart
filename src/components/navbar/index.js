@@ -1,5 +1,5 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import {
   Nav,
   NavLogo,
@@ -15,9 +15,22 @@ import { IconContext } from "react-icons";
 import { Link } from "react-router-dom";
 import svg from '../../assets/logo.svg';
 
+import { updateLocalStorageCartData } from "../../redux/actions";
+import { BiWindows } from "react-icons/bi";
+
 const Navbar = () => {
+  const cart = useSelector((state) => state.cart);
   const totalFav = useSelector(state => state.favorites).length;
   const cartQuantity = useSelector(state => state.cart).length;
+  const dispatch = useDispatch();
+
+  
+  const cartLocalStorageHandler = () =>{
+    dispatch(updateLocalStorageCartData(cart));
+  }
+  window.onload = function(){
+    cartLocalStorageHandler()
+  }
 
   return (
     <>
@@ -42,30 +55,34 @@ const Navbar = () => {
             </NavLink>
           </NavMenu>
           <IconLink>
-            <Link style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}} to="/cart" activeStyle>
+            <Link style={{display: 'flex', justifyContent: 'center', alignItems: 'center', textDecoration: "none", color: "black"}} to="/cart" activeStyle onClick={cartLocalStorageHandler}>
               <FiShoppingCart />
               <span style={{
                 // position: 'absolute',
                 fontWeight: '500', 
-                fontSize: '1rem',
+                fontSize: '1.3rem',
+                marginLeft: "5px"
               }}
               >
                 {cartQuantity}
               </span>
             </Link>
-            <Link style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}} to='/favorites'>
+            <Link style={{display: 'flex', justifyContent: 'center', alignItems: 'center', textDecoration: "none", color: "black"}} to='/favorites'>
               <MdFavoriteBorder value={totalFav} />
               <span style={{
                 // position: 'absolute',
                 fontWeight: '500', 
-                fontSize: '1rem',
+                fontSize: '1.3rem',
+                marginLeft: "5px"
               }}
               >
                 {totalFav}
               </span>
             </Link>
             
-            <FiUser />
+            <Link to="/loginPage">
+              <FiUser />
+            </Link>
           </IconLink>
         </Nav>
       </IconContext.Provider>
