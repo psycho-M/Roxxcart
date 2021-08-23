@@ -12,7 +12,7 @@ function Cart(){
     const dispatch = useDispatch();
     const cart = useSelector(state => state.cart);
     const total = useSelector(state => state.total);
-    const [loggedIn, setLoggedIn] = useState(false);
+    const [loggedIn, setLoggedIn] = useState(true);
 
     return(
         <div className="cart">
