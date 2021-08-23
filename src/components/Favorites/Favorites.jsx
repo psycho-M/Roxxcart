@@ -13,7 +13,7 @@ function Favorites() {
     ));
     return (
         <div className="shop">
-            <Filter />
+            {/* <Filter /> */}
             <div className="shop-content">{mainData}</div>
         </div>
     );

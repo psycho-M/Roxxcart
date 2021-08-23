@@ -76,6 +76,20 @@ const subFav = (item) => {
     };
 }
 
+const loginStatus = (status) =>{
+    return{
+        type: 'LOGIN',
+        payload: status
+    }
+}
+
+const updateLocalStorageCartData = (data) =>{
+    return{
+        type: 'UPDATE_LOCAL_STORAGE',
+        payload: data
+    }
+}
+
 
 export {
     addQuantity,
@@ -88,6 +102,8 @@ export {
     filterBySize,
     filterByPrice,
     addFav,
-    subFav
+    subFav,
+    loginStatus, 
+    updateLocalStorageCartData
 };
 
