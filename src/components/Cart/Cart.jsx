@@ -4,12 +4,15 @@ import data from "../../data"
 import CartItem from "./CartItem";
 
 import { useSelector, useDispatch } from 'react-redux';
+import { useState } from "react";
+import { Link } from 'react-router-dom';
 
 
 function Cart(){
     const dispatch = useDispatch();
     const cart = useSelector(state => state.cart);
     const total = useSelector(state => state.total);
+    const [loggedIn, setLoggedIn] = useState(false);
 
     return(
         <div className="cart">
@@ -34,7 +37,9 @@ function Cart(){
                 <div className="checkout">
                     <span className="total-cost">Total Amount: <span>{total}</span></span>
                     <span className="checkout-btn">
-                        <button>Checkout</button>
+                        <Link to={loggedIn ? '/order-now' : '/sign-up'}>
+                            <button >Checkout</button>
+                        </Link>
                     </span>
                 </div>
             </main>

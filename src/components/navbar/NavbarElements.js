@@ -20,10 +20,11 @@ export const NavLogo = styled(Link)`
   color: #11052c;
   height: 50px;
   text-decoration: none;
+  width: 20%;
 `;
 
 export const LogoImag = styled.img`
-  position: absolute;
+  // position: absolute;
   left: 20px;
   height: 2rem;
   margin: 15px;

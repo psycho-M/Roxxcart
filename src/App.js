@@ -10,6 +10,8 @@ import Cart from "./components/Cart/Cart";
 import Favorites from './components/Favorites/Favorites';
 import "./components/FontawesomeIcons";
 import ProductPage from "./components/productPage/productPage";
+import OrderPage from "./components/OrderPage/OrderPage";
+import SignUp from './components/pages/LoginPage/SignUp'
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
         <Route path="/Shop" component={Shop} />
         <Route path="/cart" component={Cart} />
         <Route path="/favorites" component={Favorites} />
+        <Route path="/order-now" component={OrderPage} />
+        <Route path="/sign-up" component={SignUp} />
         <Route path="/products/:id" component={ProductPage} />
       </Switch>
     </Router>
